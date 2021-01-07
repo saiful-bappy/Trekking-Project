@@ -1,0 +1,660 @@
+/*-----------------------------------------------------------------------------------
+
+	Template Name: phototime
+	Template URI: http://www.softtech-it.com
+	Description: photo related template
+	Author: Mtm Sujan
+	Author URI: http://www.bappy.xyz
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	Version: 1.0
+
+-----------------------------------------------------------------------------------
+
+	1. Typography
+	2. Header Area
+		2.1 Menu Area
+		2.2 Header Text 
+		2.3 Angle area 
+	3. Gender Area
+	4. Men Area
+		4.1 Design
+		4.2 Design Text
+	5. Community Area
+		5.1 Flex Container
+	6. Subscribe Area
+		6.1 Subscribe
+	7. Download Area
+		7.1 Download
+		7.2 Mobile Store
+	8. Footer Area
+		8.1 Left Area
+		8.2 Right Area
+
+-----------------------------------------------------------------------------------*/
+
+/************** 1. Typography ************************/
+
+@font-face {
+    font-family: "Quicksand_Bold";
+    src: url(../fonts/Quicksand_Bold.woff);
+}
+
+@font-face {
+    font-family: "Myriad-Pro";
+    src: url('../fonts/Myriad-Pro.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+	font-family: "Quicksand_Bold";
+	font-size: .86em;
+}
+
+/****** 2. Header Area *******/
+
+.header-area {
+	background: url('../images/header-bg.jpg') no-repeat bottom center;
+	background-size: cover;
+	text-align: center;
+	overflow: hidden;
+}
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.logo-area {
+	float: left;
+	overflow: hidden;
+}
+
+.logo-area a img {
+	margin-top: 40px;
+}
+
+/******* 2.1 Menu Area *******/
+
+.menu-area {
+	margin-top: 40px;
+}
+
+.menu-area {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.menu-area ul {
+	list-style: none;
+	
+}
+
+.menu-area ul li {
+	margin-right: 20px;
+	display: inline-block;
+}
+
+.menu-area ul li:last-child {
+	margin-right: 0;
+}
+
+.menu-area ul li a {
+	display: inline-block;
+	text-decoration: none;
+	text-transform: capitalize;
+	color: white;
+	padding: 10px 10px;
+	font-size: 18px;
+	border-bottom: 2px solid transparent;
+}
+
+.menu-area ul li a:hover {
+	color: #aa9b77;
+	transition: 300ms;
+}
+
+/***** 2.2 Header Text ******/
+
+h1 {
+    font-family: "Myriad-Pro";
+	font-size: 48px;
+	font-weight: bold;
+	text-transform: capitalize;
+	color: white;
+	margin: 200px 0 5px 0;
+	padding: 0;
+	letter-spacing: 2px;
+}
+
+.header-text p {
+	width: 60%;
+	margin: 0 auto;
+	color: #dce2e7;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+/***** 2.3 Angle area *****/
+
+.angle-down {
+	margin-top: 162px;
+	margin-bottom: 20px;
+}
+
+.angle-down a {
+	text-decoration: none;
+	color: white;
+	font-size: 36px;
+}
+
+/****** 3. Gender Area *******/
+
+.gender-area {
+	background-color: #f5f6f7;
+	overflow: hidden;
+	padding: 40px 0;
+}
+
+.gender {
+	float: left;
+	overflow: hidden;
+	margin-top: 12px;
+}
+
+.flex {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.btn {
+	display: inline-block;
+	padding: 15px 30px;
+	text-decoration: none;
+	color: white;
+	font-size: 12px;
+	text-transform: uppercase;
+	background-color: #aa9b77;
+	border-radius: 2px;
+	letter-spacing: 1px;
+	border: 1px solid transparent;
+    font-weight: bold;
+}
+
+.btn:hover {
+	background-color: #FFFFFF;
+	color: #aa9b77;
+	border: 1px solid #aa9b77;
+	transition: 1s;
+}
+
+.gender form input[type="checkbox"] {
+	display: none;
+}
+
+.gender form label {
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: #585858;
+	cursor: pointer;
+}
+
+.gender form label:before {
+	content: "\2714";
+	border: 0.2em solid #aa9b77;
+	border-radius: 0.2em;
+	width: 1em;
+	height: 1em;
+	display: inline-block;
+	padding-left: 0.2em;
+	padding-bottom: 0.3em;
+	margin-right: 0.9em;
+	margin-left: 0.9em;
+	color: transparent;
+	font-size: 16px;
+	font-weight: bold;
+	transition: .3s;
+}
+
+.gender form label:first-of-type:before {
+	margin-left: 0;
+}
+
+.gender form input[type="checkbox"]:checked + label::before {
+	background-color: #aa9b77;
+	color: white;
+}
+
+.gender form label:active::before {
+	transform: scale(0);
+}
+
+/***** 4. Men Area *****/
+
+.men-area {
+	padding: 100px 0;
+	overflow: hidden;
+}
+
+.men .gents {
+	overflow: hidden;
+}
+
+.men .gents h3 {
+	text-transform: uppercase;
+	color: #585858;
+    float: left;
+	margin-right: 60px;
+	overflow: hidden;
+}
+
+.men .gents hr {
+    padding-top: 10px;
+    border-bottom: 2px solid #cccccc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    overflow: hidden;
+}
+
+.slide {
+	text-align: right;
+	margin-top: 80px;
+	margin-bottom: 20px;
+	color: #aa9b77;
+	font-size: 16px;
+}
+
+.slide a {
+	text-decoration: none;
+	color: #aa9b77;
+	padding: 5px 5px;
+	font-size: 20px;
+}
+
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.flex-container .products {
+	width: 30%;
+	background-color: #f5f6f7;
+	text-align: center;
+	border: 5px solid transparent;
+}
+
+.flex-container .products:hover {
+	border: 5px solid #aa9b77;
+	transition: .5s;
+	border-radius: 3px;
+}
+
+/***** 4.1 Varient Area *****/
+
+.flex-container .products .varient {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 40px;
+	margin-top: 5px;
+}
+
+.flex-container .products .varient .size a {
+	display: flex;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #424242;
+	padding: 10px 10px;
+}
+
+.flex-container .products .varient .size a i {
+	font-size: 22px;
+	margin-left: 10px;
+}
+
+.flex-container .products .varient .color a {
+	display: inline-block;
+	background-color: tomato;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 16px;
+	color: #424242;
+	padding: 10px 10px;
+	border-radius: 50%;
+	margin: 10px 5px 0 0;
+}
+
+.flex-container .products .varient .color .blue {
+	background-color: blue;
+}
+
+.flex-container .products .varient .color .yellow {
+	background-color: yellow;
+}
+
+.flex-container .products .varient .color .gray {
+	background-color: gray;
+	margin-right: 10px;
+}
+
+.flex-container .products .product-img img {
+	height: 200px;
+}
+
+/* Price Area */
+
+.flex-container .products .price {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+	padding: 20px 10px;
+}
+
+.flex-container .products .price a {
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #aa9b77;
+	font-size: 16px;
+}
+
+.flex-container .products .price .amount {
+	color: #424242;
+	font-size: 20px;
+}
+
+/***** 5. Women Area ****/
+
+.women-area {
+	padding: 0 0 100px 0;
+	overflow: hidden;
+}
+
+.women .ladies {
+	overflow: hidden;
+}
+
+.women .ladies h3 {
+	text-transform: uppercase;
+	color: #585858;
+    float: right;
+	margin-left: 60px;
+	overflow: hidden;
+}
+
+.women .ladies hr {
+    padding-top: 10px;
+    border-bottom: 2px solid #cccccc;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    overflow: hidden;
+}
+
+.women .slide {
+	text-align: left;
+}
+
+/***** About Us Area *****/
+
+.about-area {
+	overflow: hidden;
+	height: 500px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #aa9b77;
+}
+
+.about-area .about fieldset {
+	width: 60%;
+	margin: 0 auto;
+	border: 2px solid #837659;
+	padding: 100px 100px;
+	text-align: center;
+}
+
+.about-area .about fieldset legend {
+	margin: 0 auto;
+	padding: 0 20px 0;
+	text-transform: uppercase;
+	font-size: 20px;
+	color: #837659;
+	font-weight: bold;
+}
+
+.about-area .about fieldset p {
+	line-height: 24px;
+	color: #4f4d49;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+/***** Theme Area *****/
+
+.theme-area {
+	background-color: #535253;
+	padding: 20px 0;
+	overflow: hidden;
+}
+
+.container {
+	overflow: hidden;
+}
+
+.theme-area a {
+	float: left;
+	overflow: hidden;
+	font-size: 32px;
+	text-decoration: none;
+	color: #424242;
+	margin-right: 20px;
+}
+
+.theme-area p {
+	padding-top: 10px;
+	font-size: 16px;
+	color: white;
+}
+
+/***** Footer Area *****/
+
+.footer-area {
+	background-color: #424242;
+	overflow: hidden;
+	padding: 100px 0;
+}
+
+.footer-area .flex-container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.footer-area .flex-container .trekking {
+	width: 40%;
+}
+
+.footer-area .flex-container .trekking h3 {
+	color: white;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	margin-bottom: 20px;
+}
+
+.footer-area .flex-container .trekking p {
+	color: #d0d0d0;
+	line-height: 22px;
+}
+
+.footer-area .flex-container .footer-item {
+	width: 40%;
+	text-align: right;
+}
+
+.footer-area .flex-container .footer-item ul {
+	list-style: none;
+	margin-bottom: 10px;
+}
+
+.footer-area .flex-container .footer-item ul li {
+	display: inline-block;
+	padding: 0 5px;
+}
+
+.footer-area .flex-container .footer-item ul li:first-child {
+	padding-left: 0;
+}
+
+.footer-area .flex-container .footer-item ul li:last-child {
+	padding-right: 0;
+}
+
+.footer-area .flex-container .footer-item ul .border {
+	color: #aa9b77;
+	padding: 0;
+}
+
+.footer-area .flex-container .footer-item ul li a {
+	display: inline-block;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #d0d0d0;
+}
+
+.footer-area .flex-container .footer-item p {
+	color: #d0d0d0;
+	font-size: 18px;
+}
+
+
+/************************************* Responsive Design ************************************/
+/****** Tablets *****/
+@media only screen and (max-width: 992px) {
+    .container {
+        width:90%;
+    }
+    /* 2. Header Area */
+    header .heading p {
+        width: 100%;
+    }
+
+    /* 2.1 Menu Area */
+    .header-area .logo-area {
+        float: none;
+    }
+    .header-area .menu-area {
+		display: block;
+	}
+
+	/* 4. Men Area */
+	.men-area .slide {
+		text-align: center;
+	}
+	.flex-container {
+		flex-wrap: wrap;
+		justify-content: space-around;
+	}
+	.flex-container .products {
+		width: 40%;
+	}
+	.flex-container .products:last-child {
+		margin-top: 50px;
+	}
+
+	/* 5. Women Area */
+	.women-area .slide {
+		text-align: center;
+	}
+
+	/* 7. Footer Area */
+	.footer-area .flex-container {
+		display: block;
+	}
+	.footer-area .flex-container .trekking {
+		width: 100%;
+	}
+	.footer-area .flex-container .footer-item {
+		width: 100%;
+		text-align: left;
+		margin-top: 50px;
+	}
+}
+/* Smart Phones */
+@media only screen and (max-width: 750px) {
+	/* 2. Header Area */
+	h1 {
+		font-size: 22px;
+		color: white;
+		margin: 80px 0 10px 0;
+	}
+	.header-text p {
+		width: 90%;
+		font-size: 14px;
+	}
+
+	/***** 2.3 Angle area *****/
+	.angle-down {
+		margin-top: 100px;
+	}
+
+	/****** 3. Gender Area *******/
+	.gender {
+		float: none;
+		margin-bottom: 50px;
+	}
+
+	.flex {
+		display: block;
+	}
+
+	/* 4. Men Area */
+	.men-area .slide {
+		text-align: center;
+	}
+	.flex-container {
+		display: block;
+	}
+	.flex-container .products {
+		width: auto;
+	}
+	.flex-container .products {
+		margin-bottom: 50px;
+	}
+	.flex-container .products:last-child {
+		margin-bottom: 0;
+	}
+
+	/***** About Us Area *****/
+	.about-area .about fieldset {
+		width: auto;
+		padding: 40px 40px;
+	}
+}
+/* Small Phones */
+@media only screen and (max-width: 400px) {
+	/****** 3. Gender Area *******/
+	.flex {
+		display: block;
+	}
+	.gender {
+		margin-bottom: 40px;
+	}
+	.gender form label {
+		display: block;
+	}
+	.gender form label:before {
+		margin: 0 1em 0.7em 0;
+	}
+	.gender form label:before:last-child {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+}
